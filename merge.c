@@ -3,7 +3,7 @@
 #include<time.h>
 
 int n;
-
+//Algorithm for merge sort
 void mergeSort(int arr[], int left, int right)
 {
 
@@ -43,6 +43,8 @@ int merge(int arr[], int left,int mid, int right)
 				arr[k]=b[k];
 }
 
+//Main function 
+
 int main()
 {
 	int i;
@@ -62,21 +64,24 @@ int main()
 		printf("%d\t",arr[i]);
 	printf("\n");
 
+	//Start Time required for merge sort 
 	start=time(&start);
 
 	for(i=0;i<30000;i++)
 		mergeSort(arr,0,n-1);
 
 	end=time(&end);
+	//End of time 
 
 	exTime=(double) difftime(end,start);
 
+	//Print the elements after sorting 
 	printf("The array after sorting :\n");
 
 	for(i=0;i<n;i++)
 		printf("%d\t",arr[i]);
 	printf("\n");
-
+	//Print the time required 
 	printf("The execution time required : %lf secs",exTime);
 
 	return 0;
